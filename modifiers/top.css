@@ -1,13 +1,16 @@
 #overlay {
-	top: 40px;
+  top: 40px;
 }
 
 #performance {
-	order: 1;
-	margin: 20px 0 0 0;
-	flex-direction: column-reverse;
+  order: 1;
+  flex-direction: column-reverse;
 }
 
 #overlay.hidden #beatmap, #overlay.hidden #performance > * {
-	transform: translate(0, -15px);
+  transform: translate(0, -15px);
+}
+
+.energy_background {
+  margin: 10px 0 0 0;
 }

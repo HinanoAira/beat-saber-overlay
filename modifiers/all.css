@@ -1,0 +1,28 @@
+#bsr_group {
+  display: inline-block;
+}
+
+.energy_container {
+  visibility: visible;
+  height: 20px;
+}
+
+#miss_group {
+  display: block;
+}
+
+#mod_group {
+  visibility: visible;
+}
+
+#pp_group {
+  display: inline-block;
+}
+
+#now_pp_group {
+  display: block;
+}
+
+#label_group {
+  display: inline-block;
+}

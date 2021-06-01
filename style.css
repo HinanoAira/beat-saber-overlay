@@ -1,225 +1,343 @@
 body {
-	font-family: "Montserrat", sans-serif;
-
-	color: white;
-	/* background: black; */
-
-	margin: 0;
-
-	display: flex;
-	flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  
+  color: white;
+  /* background: black; */
+  
+  margin: 0;
+  
+  display: flex;
+  flex-direction: column;
 }
 
 #overlay {
-	display: flex;
-	flex-direction: column;
-	
-	position: absolute;
-	left: 40px;
-	bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
 }
 
 /* Beatmap */
 
 #beatmap {
-	display: flex;
+  display: flex;
 }
 
 #cover {
-	overflow: hidden;
-	border-radius: 6px;
-	position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  position: relative;
 }
 
 #image {
-	width: 90px;
-	height: 90px;
+  width: 90px;
+  height: 90px;
 }
 
 #meta {
-	display: flex;
-	flex-direction: column;
-
-	flex-grow: 1;
-	padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  
+  flex-grow: 1;
+  padding: 0 16px;
 }
 
 #text {
-	flex-grow: 1;
+  flex-grow: 1;
+  
+  /* Fix text offset */
+  transform: translate(0, -5px);
+}
 
-	/* Fix text offset */
-	transform: translate(0, -5px);
+#title_subtitle {
+  display: inline-block;
 }
 
 #titles {
-	display: flex;
-	align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 #title {
-	font-size: 24px;
-	font-weight: 700;
+  white-space : nowrap;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#title_group {
+  overflow: hidden;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y:hidden;
+}
+
+#title_subtitle_space {
+  width: 4px;
 }
 
 #subtitle {
-	font-size: 14px;
-	font-weight: 600;
-	margin: 0 4px 2px 4px;
+  white-space : nowrap;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-#artist-group {
-	display: block;
-	font-size: 16px;
-	font-weight: 400;
-	margin: 2px 0 0 0;
+#subtitle_group {
+  overflow: hidden;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y:hidden;
+  padding-bottom: 2px;
 }
 
-#difficulty, #bpm-group, #njs-group {
-	display: inline-block;
-
-	font-size: 10px;
-	font-weight: 800;
-	text-transform: uppercase;
-	letter-spacing: 3px;
+#artist_mapper {
+  overflow: hidden;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y:hidden;
 }
 
-#bsr-group {
-	display: inline-block;
-
-	font-size: 18px;
-	font-weight: 800;
-	letter-spacing: 3px;
-	margin: 0 0px;
+#artist_group {
+  display: inline-block;
+  white-space : nowrap;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 2px 0 0 0;
 }
 
-#difficulty {
-	padding: 4px 5px 4px 8px;
-
-	color: black;
-	background: white;
-	border-radius: 4px;
+#map_info {
+  display: inline-block;
+  white-space : nowrap;
 }
 
-#bpm-group {
-	margin: 0 8px;
+#difficulty_group, #bpm_group, #njs_group, #mod_group {
+  display: inline-block;
+  white-space : nowrap;
+  
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  vertical-align: middle;
 }
 
-#njs-group {
-	margin: 0 0px;
+#pp_group {
+  display: none;
+  
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 0 8px;
+}
+
+#pp {
+  margin: 0 0 0 8px;
+}
+
+#pp_text {
+  font-size: 10px;
+}
+
+#mod_group {
+  visibility: hidden;
+  margin: 0 8px;
+}
+
+#bsr_group {
+  display: none;
+  
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 0 0px;
+}
+
+#difficulty_group {
+  padding: 4px 5px 4px 8px;
+  
+  color: black;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y:hidden;
+}
+
+#difficulty_label {
+  white-space : nowrap;
+}
+
+#label_group {
+  display: none;
+}
+
+#bpm_group {
+  margin: 0 8px;
+}
+
+#njs_group {
+  margin: 0 0px;
 }
 
 /* Progress */
 
 #cover svg {
-	transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 #cover div {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	width: 90px;
-	height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 90px;
+  height: 90px;
 }
 
 #cover svg, #cover div {
-	position: absolute;
-	top: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #darken {
-	fill: black;
-	opacity: 0.5;
+  fill: black;
+  opacity: 0.5;
 }
 
 #remaining, #progress {
-	fill: transparent;
-	stroke: white;
-	stroke-width: 4px;
+  fill: transparent;
+  stroke: white;
+  stroke-width: 4px;
 }
 
 #remaining {
-	opacity: 0.25;
+  opacity: 0.25;
 }
 
 #progress {
-	stroke-dasharray: 188.495px, 188.495px;
-	stroke-dashoffset: 188.495px;
+  stroke-dasharray: 188.495px, 188.495px;
+  stroke-dashoffset: 188.495px;
 }
 
-#progress-text {
-	font-size: 16px;
-	font-weight: 600;
+#progress_text {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* Performance */
 
 #performance {
-	display: flex;
-	flex-direction: column;
-	margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 0;
 }
 
-.performance-group {
-	margin: 4px 0 0 0;
+.performance_group {
+  margin: 4px 0 0 0;
 }
 
-.performance-group .text {
-	display: inline-block;
+.performance_group .text {
+  display: inline-block;
 
-	font-size: 22px;
-	font-weight: 600;
+  font-size: 22px;
+  font-weight: 600;
 }
 
-.performance-group .subtext {
-	display: inline-block;
-
-	font-size: 14px;
-	font-weight: 600;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-
-	opacity: 0.75;
+.performance_group .subtext {
+  display: inline-block;
+  
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  
+  opacity: 0.75;
 }
 
 #score {
-	display: block;
-	font-size: 34px;
-	font-weight: 700;
-	letter-spacing: 2px;
+  display: block;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 41px;
+}
+
+#miss_group {
+  display: none;
+}
+
+#now_pp_group {
+  display: none;
+}
+
+.scroll {
+  display: inline-block;
+  padding-left: 100%;
+  white-space: nowrap;
+  line-height: 1em;
+  animation: scrollAnime 10s linear infinite;
 }
 
 /* Animations and state */
 
 #overlay {
-	--show: cubic-bezier(0.19, 1, 0.22, 1) 300ms;
-	--hide: cubic-bezier(0.55, 0.085, 0.68, 0.53) 200ms;
+  --show: cubic-bezier(0.19, 1, 0.22, 1) 300ms;
+  --hide: cubic-bezier(0.55, 0.085, 0.68, 0.53) 200ms;
+}
+
+.energy_container {
+  visibility: hidden;
+  margin: 4px 0 4px 0;
+  height: 12px;
+  width: 300px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.energy_background {
+  height: 10px;
+  background-color: rgba(80, 80, 80, 0.8);
+  border-radius: 5px;
+}
+
+#energy_bar {
+  background-color: white;
+  height: 100%;
+  width: 50%;
+  bottom: 0;
+  transition: all 100ms;
+  border-radius: 5px;
 }
 
 #overlay #beatmap, #overlay #performance > * {
-	transition:
-		opacity var(--show),
-		transform var(--show);
+  transition:
+  opacity var(--show),
+  transform var(--show);
 }
 
 #overlay.hidden #beatmap, #overlay.hidden #performance > * {
-	opacity: 0;
-	transform: translate(0, 15px);
-	transition:
-		opacity var(--hide),
-		transform var(--hide);
+  opacity: 0;
+  transform: translate(0, 15px);
+  transition:
+  opacity var(--hide),
+  transform var(--hide);
 }
 
 #overlay #performance > *:nth-child(3) {
-	transition-delay: 100ms !important;
+  transition-delay: 100ms !important;
 }
 
 #overlay #performance > *:nth-child(2) {
-	transition-delay: 200ms !important;
+  transition-delay: 200ms !important;
 }
 
 #overlay #performance > *:nth-child(1) {
-	transition-delay: 300ms !important;
+  transition-delay: 300ms !important;
+}
+
+@keyframes scrollAnime{
+    0% { transform: translateX(0%)}
+  100% { transform: translateX(-100%)}
 }

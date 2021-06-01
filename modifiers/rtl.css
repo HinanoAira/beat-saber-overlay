@@ -1,12 +1,49 @@
 #overlay {
-	direction: rtl;
-	right: 40px;
+  direction: rtl;
+  right: 40px;
+}
+
+#title_group {
+  direction: ltr;
+}
+
+#subtitle_group {
+  direction: ltr;
+}
+
+#artist_mapper {
+  display: inline-block;
+  direction: ltr;
+}
+
+#artist_group {
+  direction: ltr;
+}
+
+#bpm_group {
+  direction: ltr;
+}
+
+#njs_group {
+  direction: ltr;
+}
+
+#pp_group {
+  direction: ltr;
+}
+
+#difficulty_group {
+  direction: ltr;
 }
 
 #score {
-	transform: translate(2px, 0);
+  transform: translate(2px, 0);
 }
 
 #difficulty, #bpm {
-	direction: ltr;
+  direction: ltr;
+}
+
+#energy_bar {
+  float: left;
 }
