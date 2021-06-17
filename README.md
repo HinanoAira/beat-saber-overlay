@@ -140,6 +140,9 @@ file:///C:/TOOL/beat-saber-overlay/index.html?ip=192.168.1.10&port=6557&modifier
 
 ※[XSplit Broadcasterの自動シーン切り替え](https://github.com/rynan4818/BS-AutoSceneChanger) (オーバーレイとは関係ありません)
 
+# オーバーレイが動作しない場合
+[トラブルシューティング](Troubleshooting.md)を確認してください。
+
 # オーバーレイの改造について
 オーバーレイは改造し易くするため、いくつか機能が用意されています。
 
